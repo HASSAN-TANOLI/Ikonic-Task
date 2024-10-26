@@ -1,0 +1,1121 @@
+/*
+ Theme Name: Twenty Twenty-Four Child
+ Theme URI: https://wordpress.org/themes/twentytwentyfour/
+ Author: the WordPress team
+ Author URI: https://wordpress.org
+ Description: A child theme for Twenty Twenty-Four
+ Template: twentytwentyfour
+ Version: 1.0.0
+*/
+:root {
+  margin-top: 15px !important;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background-color: #ffffff;
+  color: #54585a;
+  font-family: "Catamaran", sans-serif;
+}
+
+/* custom styling for the wordpress primary menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:active {
+  color: #345884;
+}
+
+.nav-menu li {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 34px;
+  color: #54585a;
+  font-family: "Catamaran", sans-serif;
+}
+
+.nav-menu li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background-color: #fff;
+  padding: 10px;
+  z-index: 100;
+}
+
+.nav-menu li:hover ul {
+  width: 200px;
+  background-color: #f9f9f9;
+  display: block;
+  padding-bottom: 10px;
+  border: 1px solid #d5d5d5;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+}
+
+/* Responsive menu styles */
+@media (max-width: 768px) {
+  .primary-menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0;
+    z-index: 1000;
+    margin-top: 50px;
+  }
+
+  .header-container .site-logo {
+    width: 60% !important;
+  }
+
+  .header-container {
+    padding: 50px 20px 30px 20px !important;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .nav-menu li ul {
+    left: 100px;
+  }
+
+  .header-container {
+    position: relative;
+  }
+
+  .menu-icon {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    z-index: 1001;
+  }
+
+  /* Show menu when active */
+  .primary-menu.show {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Header container div style started from here */
+.header-container {
+  padding: 30px;
+  width: 100%;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header-container .site-logo {
+  width: 300px;
+  height: auto;
+}
+
+/* Header container div style ended here */
+
+/* Footer contain div style started from here */
+
+.footer-container {
+  width: 100%;
+  background-color: #ededed;
+  padding: 80px 20px;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer-logo-mission {
+  flex: 1 1 300px;
+}
+
+.footer-container .site-logo {
+  width: 250px;
+  height: auto;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+.footer-logo-mission p {
+  max-width: 400px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-links {
+  display: flex;
+  flex: 1 1 600px;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1;
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  margin-bottom: 18px;
+  color: #54585a;
+  font-weight: 600;
+  font-family: "Catamaran", sans-serif;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 18px;
+}
+
+.footer-column ul li a {
+  color: #54585a;
+  text-decoration: none;
+  font-family: "Catamaran", sans-serif;
+  font-weight: 600;
+}
+
+#footer-careers li {
+  margin-bottom: 18px;
+}
+
+.footer-column .menu-item {
+  font-size: 1rem;
+  margin-bottom: 18px;
+  color: #54585a;
+  font-weight: 600;
+  font-family: "Catamaran", sans-serif;
+  text-decoration: none;
+}
+
+.footer-column ul#footer-careers li a {
+  font-size: 1rem;
+  margin-bottom: 18px;
+  color: #54585a;
+  font-weight: 300;
+  font-family: "Catamaran", sans-serif;
+  text-decoration: none;
+}
+
+#footer-careers li a:hover,
+#footer-careers li a:active {
+  color: #345884;
+}
+
+.footer-column ul li a:hover,
+.footer-column ul li a:active {
+  color: #345884;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+address {
+  font-style: normal;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+address p {
+  padding: 14px 0px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4d4d4d;
+  color: white;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  border-radius: 100px;
+  background-color: #326295;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a:hover {
+  background-color: #4d8ed3;
+}
+
+.social-icons svg {
+  width: 22px;
+  height: 22px;
+}
+
+.social-icons .facebook svg {
+  margin-left: -7px;
+}
+
+.social-icons svg path,
+.social-icons svg rect,
+.social-icons svg circle {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-logo-mission {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Footer contain div ended here */
+
+/* compliance repeated section style started from here  */
+.main-container {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.inner-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  text-align: center;
+}
+.inner-container h2 {
+  font-size: 1.5rem;
+  font-family: "Catamaran", sans-serif;
+  font-weight: 600;
+  color: #4f514f;
+  margin-bottom: 15px;
+}
+
+.inner-container p {
+  font-size: 1rem;
+  font-family: "Catamaran", sans-serif;
+  color: #54585a;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.inner-container strong {
+  font-weight: bold;
+  color: #4f514f;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.buttons-container .btn {
+  background-color: #326295;
+  color: #fff;
+  padding: 10px 50px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.buttons-container .btn:hover {
+  background-color: #4d8ed3;
+}
+
+@media (max-width: 768px) {
+  .buttons-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .inner-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .inner-container p {
+    font-size: 0.9rem;
+  }
+}
+/* compliance repeated section style ended here  */
+
+/* faqs section css started from here */
+.faq-section {
+  max-width: 800px;
+  margin: 60px auto 30px auto;
+  padding: 20px;
+}
+
+.faq-section h2 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  text-align: left;
+  margin-bottom: 40px;
+  color: #54585a;
+  font-family: "Catamaran", sans-serif;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.faq-question h3 {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #54585a;
+  font-family: "Catamaran", sans-serif;
+  font-weight: 600;
+}
+
+.faq-toggle {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.faq-item .faq-question,
+.faq-item .faq-answer {
+  background-color: #f2f2f2;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+
+.faq-item.active .faq-question {
+  background-color: #345884;
+}
+
+.faq-item.active .faq-question h3 {
+  color: #ffffff;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+  color: #ffffff;
+}
+
+/* faqs section css ended here */
+
+/* specialized program section template */
+.specialized-programs {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f4f4f4;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.programs-header h2 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  margin-bottom: 20px;
+  font-family: "Catamaran", sans-serif;
+  font-weight: 600;
+}
+
+.programs-header p {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 40px;
+  font-family: "Catamaran", sans-serif;
+}
+
+.programs-grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1250px;
+  width: 1250px;
+}
+
+.program-grid-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+}
+
+.program-grid-row .program-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 50%;
+  padding: 30px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.program-card {
+  cursor: pointer;
+}
+
+.program-card.active h3 {
+  color: white;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  background-color: #345884;
+}
+
+.program-card:hover h3 {
+  color: #ffffff;
+}
+
+.program-card h3 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #333;
+  font-family: "Catamaran", sans-serif;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon svg {
+  width: 50px;
+  height: 50px;
+  fill: #1f3b5b;
+}
+
+.icon svg path {
+  fill: #326295;
+  stroke: #326295;
+}
+
+.program-card:hover .icon svg path {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+@media (max-width: 1250px) {
+  .programs-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .program-card {
+    width: 45%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 600px) {
+  .program-grid-row {
+    flex-wrap: wrap;
+  }
+
+  .program-grid-row .program-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .program-card {
+    width: 100%;
+  }
+
+  .program-grid-row .program-card {
+    width: 100%;
+  }
+}
+
+/* specialized program section template css ended here */
+
+/* virtual tour section css started here */
+
+.virtual-tour-section {
+  background-color: #2f6ebba3;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.virtual-tour-heading {
+  color: #fff;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: "Catamaran", sans-serif;
+}
+
+.virtual-tour-video {
+  margin-top: 20px;
+}
+
+.video-thumbnail {
+  background-image: url("http://ikonic-task.local/wp-content/uploads/2024/10/4443-1.webp");
+  background-size: cover;
+  background-position: center;
+  height: 460px;
+  width: 740px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.play-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .virtual-tour-heading {
+    font-size: 20px;
+  }
+
+  .video-thumbnail {
+    width: 100%;
+    height: 400px;
+  }
+
+  .play-icon img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .virtual-tour-heading {
+    font-size: 18px;
+  }
+
+  .video-thumbnail {
+    width: 100%;
+    height: 200px;
+  }
+
+  .play-icon img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* virtual tour section css ended here */
+
+/* Accreditation-section css started here */
+
+.Accreditation-section {
+  background-color: #f2f2f2;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.Accreditation-heading {
+  color: #54585a;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: "Catamaran", sans-serif;
+}
+
+.Accreditation-text {
+  color: #54585a;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-family: "Catamaran", sans-serif;
+  margin-top: 10px;
+  max-width: 51%;
+  margin: 0 auto;
+}
+
+.Accreditation-image {
+  margin-top: 40px;
+  width: 350px;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .Accreditation-image {
+    width: auto;
+  }
+
+  .Accreditation-text {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Accreditation-section css ended here */
+
+/* Hospitals-section css started here */
+
+.hospitals-section {
+  max-width: 1250px;
+  width: 1250px;
+  background-color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hospitals-heading {
+  color: #54585a;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: "Catamaran", sans-serif;
+  text-align: left;
+  margin-right: 154px;
+}
+
+.hospitals-text {
+  color: #54585a;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-family: "Catamaran", sans-serif;
+  margin-top: 10px;
+  max-width: 75%;
+  text-align: left;
+}
+
+.info-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 0px;
+  left-left: 0px;
+}
+
+.info-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 220px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+  flex-direction: row;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 1250px) {
+  .hospitals-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hospitals-heading {
+    text-align: center;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-cards {
+    gap: 15px;
+  }
+  .info-card {
+    width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1250px) {
+  .hospitals-section {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .hospitals-text {
+    width: 100%;
+  }
+}
+
+/* Hospitals-section css ended here */
+
+/* hero banner section started from here */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent
+    linear-gradient(
+      90deg,
+      #4f514ff2 0%,
+      #4f514f80 57%,
+      #4f514f00 78%,
+      #4f514f00 100%
+    )
+    0% 0% no-repeat padding-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content {
+  text-align: center;
+  color: #fff;
+  padding: 0px 20px;
+}
+
+.banner-content h1 {
+  font-size: 4rem;
+  font-family: "Catamaran", sans-serif;
+  line-height: 4.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: left;
+}
+
+.banner-content p {
+  font-family: "Catamaran", sans-serif;
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+  color: #ffffff;
+  margin-top: 10px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+  .banner-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-content h1 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+  .banner-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* video slider css started here */
+.video-slider-container {
+  text-align: center;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.video-slider-container h2 {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  margin-bottom: 20px;
+  font-family: "Catamaran", sans-serif;
+  font-weight: 600;
+}
+
+.main-video-display {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.main-video-display video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  z-index: 2;
+}
+
+.play-button img {
+  width: 60px;
+  height: 60px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 2;
+}
+
+button.arrow.left-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #345884;
+  border: 2px solid #345884;
+}
+
+button.arrow.left-arrow:hover {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #345884;
+  color: #ffffff;
+  border: 2px solid #345884;
+}
+
+button.arrow.right-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #345884;
+  color: #ffffff;
+  border: 2px solid #345884;
+}
+
+.left-arrow {
+  left: -80px;
+}
+
+.right-arrow {
+  right: -80px;
+}
+
+.thumbnail-slider {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.thumbnails {
+  display: flex;
+  overflow-x: auto;
+  gap: 30px;
+}
+
+.thumbnail {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.thumbnail img {
+  width: 120px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .left-arrow {
+    left: 0px;
+  }
+
+  .right-arrow {
+    right: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-video-display video {
+    max-width: 100%;
+  }
+  .thumbnail img {
+    width: 80px;
+    height: auto;
+  }
+  .arrow {
+    padding: 5px;
+    font-size: 14px;
+  }
+  .play-button img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* video slider code ended here */
